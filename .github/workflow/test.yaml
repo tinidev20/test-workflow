@@ -1,0 +1,14 @@
+name: task execution
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo my name
+        run: echo "My name is not Sunny"
+      - name: Multiple command execution
+        run:
+          node -v
+          echo "This is executing second time"
+          echo $USER
+          cat /etc/os-release
